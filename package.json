@@ -26,13 +26,17 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
+    "telemetry-off": "gatsby telemetry --disable",
+    "start": "gatsby develop -o",
+    "build": "gatsby build --prefix-paths",
+    "gh-pages": "gatsby build --prefix-paths && push-dir --dir=public --branch=gh-pages",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,md}\"",
+    "lint:scripts": "eslint ./src/**/*.{jsx,js}",
+    "lint:styles": "stylelint ./src/**/*.{jsx,js}",
+    "serve": "gatsby serve"
   },
   "repository": {
     "type": "git",
