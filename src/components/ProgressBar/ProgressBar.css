@@ -1,0 +1,52 @@
+.container {
+    width: 100%;
+    display: flex;
+    font-family: sans-serif;
+}
+
+.item {
+    text-align: center;
+    font-size: 80%;
+    line-height: 1.5em;
+    border-bottom: 4px solid white;
+    cursor: pointer;
+}
+
+.active {
+    border-bottom-color: dodgerblue;
+}
+
+.overdue-high {
+    background-color: var(--criticality-overdue-high);
+    color: white;
+}
+
+.overdue {
+    background-color: var(--criticality-overdue);
+    color: yellow;
+}
+
+.overdue-soon {
+    background-color: var(--criticality-overdue-soon);
+    color: yellow;
+}
+
+.due {
+    background-color: var(--criticality-due);
+}
+
+.unblocked {
+    background-color: var(--criticality-unblocked);
+}
+
+.blocked-required {
+    background-color: var(--criticality-blocked-required);
+}
+
+.blocked-non-required {
+    background-color: var(--criticality-blocked-non-required);
+}
+
+.resolved {
+    background-color: var(--criticality-resolved);
+}
